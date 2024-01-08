@@ -64,9 +64,9 @@ function updateStoreOnMovieDelete(
   totalPages
 ) {
   let updatedStore = currentStore.map((section, id) => {
-    nextSection = currentStore.length > 1 ? currentStore[id + 1] : null;
+    let nextSection = currentStore.length > 1 ? currentStore[id + 1] : null;
 
-    shiftedMovie = nextSection ? nextSection.results[0] : null;
+    let shiftedMovie = nextSection ? nextSection.results[0] : null;
 
     if (id === sectionIndex) {
       section.results.splice(movieIndex, 1);

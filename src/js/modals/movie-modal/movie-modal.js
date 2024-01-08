@@ -126,9 +126,6 @@ function setUpMovieModal(movie) {
         'queue',
         deleteBtn
       );
-      // if (deleteBtn) {
-      //   deleteMovieFromStore(e, movieModal, 'queue');
-      // }
     };
   }
 
@@ -139,10 +136,6 @@ function setUpMovieModal(movie) {
         'The movie has successfully been deleted from the watched'
       );
     });
-    // queueBtn.onclick = e => {
-    //   addMovieToStore(user, movie, movieModal, 'queue');
-    //   deleteMovieFromStore(e, movieModal, 'watched');
-    // };
   }
 
   if (deleteBtn && watchedBtn) {
@@ -150,14 +143,6 @@ function setUpMovieModal(movie) {
       deleteMovieFromStore(e, movieModal, 'queue');
       Notify.success('The movie has successfully been deleted from the queue');
     });
-    // watchedBtn.onclick = e => {
-    //   addMovieToStore(user, movie, movieModal, 'watched');
-    //   deleteMovieFromStore(e, movieModal, 'queue');
-    // };
-    // watchedBtn.addEventListener('click', e => {
-    //   addMovieToStore(user, movie, movieModal, 'watched');
-    //   deleteMovieFromStore(e, movieModal, 'queue');
-    // });
   }
 }
 
@@ -180,139 +165,3 @@ function changeBtnStatus(user, queueBtn, watchedBtn) {
     }
   }
 }
-
-// async function deleteMovieFromStore(e) {
-//   const user = auth.currentUser;
-//   const movieInQueueRef = doc(db, 'users', user.uid);
-
-//   try {
-//     let movieId = Number(e.target.getAttribute('data-movie-id'));
-
-//     const docSnapshot = await getDoc(movieInQueueRef);
-
-//     const currentQueue = docSnapshot.data()?.queue || [];
-
-//     const totalResults =
-//       currentQueue.length !== 0
-//         ? (currentQueue.length - 1) * 9 +
-//           currentQueue[currentQueue.length - 1].results.length
-//         : 0;
-
-//     let totalPages = currentQueue.length;
-
-//     const sectionToDelete = currentQueue.find(
-//       section => section.results.length === 1
-//     );
-
-//     const sectionIndex = currentQueue.findIndex(section =>
-//       section.results.some(({ id }) => id === movieId)
-//     );
-
-//     const movieIndex = currentQueue[sectionIndex].results.findIndex(
-//       ({ id }) => id === movieId
-//     );
-//     let updatedQueue;
-//     let nextSection;
-//     let shiftedMovie;
-
-//     if (sectionToDelete) {
-//       updatedQueue = currentQueue.map((section, id) => {
-//         nextSection = currentQueue.length > 1 ? currentQueue[id + 1] : null;
-
-//         shiftedMovie = nextSection ? nextSection.results[0] : null;
-
-//         if (id === sectionIndex) {
-//           section.results.splice(movieIndex, 1);
-
-//           if (nextSection) {
-//             section.results.push(shiftedMovie);
-//           }
-//           return {
-//             ...section,
-//             total_pages: totalPages - 1,
-//             total_results: totalResults - 1,
-//           };
-//         } else {
-//           if (id < sectionIndex) {
-//             return {
-//               ...section,
-//               total_pages: totalPages - 1,
-//               total_results: totalResults - 1,
-//             };
-//           } else if (id > sectionIndex && id !== currentQueue.length - 1) {
-//             const updatedResults = [
-//               ...section.results.slice(1, 9),
-//               shiftedMovie,
-//             ];
-//             return {
-//               ...section,
-//               total_pages: totalPages - 1,
-//               total_results: totalResults - 1,
-//               results: updatedResults,
-//             };
-//           } else {
-//             return {
-//               ...section,
-//               total_pages: totalPages - 1,
-//               total_results: totalResults - 1,
-//               results: [...section.results.slice(1, section.results.length)],
-//             };
-//           }
-//         }
-//       });
-
-//       updatedQueue.splice(currentQueue.length - 1, 1);
-//     } else {
-//       updatedQueue = currentQueue.map((section, id) => {
-//         nextSection = currentQueue.length > 1 ? currentQueue[id + 1] : null;
-
-//         shiftedMovie = nextSection ? nextSection.results[0] : null;
-
-//         if (id === sectionIndex) {
-//           section.results.splice(movieIndex, 1);
-
-//           if (nextSection) {
-//             section.results.push(shiftedMovie);
-//           }
-//           return {
-//             ...section,
-
-//             total_results: totalResults - 1,
-//           };
-//         } else {
-//           if (id < sectionIndex) {
-//             return {
-//               ...section,
-
-//               total_results: totalResults - 1,
-//             };
-//           } else if (id > sectionIndex && id < currentQueue.length - 1) {
-//             const updatedResults = [
-//               ...section.results.slice(1, 9),
-//               shiftedMovie,
-//             ];
-//             return {
-//               ...section,
-
-//               total_results: totalResults - 1,
-//               results: updatedResults,
-//             };
-//           } else {
-//             return {
-//               ...section,
-//               total_results: totalResults - 1,
-//               results: [...section.results.slice(1, section.results.length)],
-//             };
-//           }
-//         }
-//       });
-//     }
-
-//     await updateDoc(movieInQueueRef, {
-//       queue: updatedQueue,
-//     });
-//     movieModal.close();
-//   } catch (e) {
-//     console.log(e);
-//   }
-// }
