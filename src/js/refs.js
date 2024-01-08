@@ -1,0 +1,15 @@
+export const refs = {
+  mainContainer: document.querySelector('#main-container'),
+  moviesList: document.querySelector('.movies__list'),
+  searchForm: document.querySelector('.search'),
+  backdrop: document.querySelector('.backdrop-loader'),
+  paginationBlock: document.querySelector('#pagination'),
+  scrollButtonUp: document.querySelector('.scroll-up-button'),
+  authBtn: document.querySelector('.auth-btn'),
+  alarmBtn: document.querySelector('.alarm-btn'),
+  queueBtn: document.querySelector('#queue-library-btn'),
+  watchedBtn: document.querySelector('#watched-library-btn'),
+  homeLink: document.querySelector('#home-link'),
+  libraryLink: document.querySelector('.library-link'),
+  searchInput: document.querySelector('#search-input'),
+};

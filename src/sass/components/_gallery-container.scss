@@ -1,0 +1,125 @@
+.main {
+  flex-grow: 1;
+}
+
+.movies__list {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    column-gap: 16px;
+  }
+}
+
+.movie__item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.movie__item {
+  padding: 10px;
+  transition: all var(--cubic);
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 32px) / 2);
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - 32px) / 3);
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.movie__poster-container {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  height: 402px;
+  overflow-y: hidden;
+  border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    height: 455px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 12px;
+    height: 574px;
+  }
+}
+
+.movie__poster {
+  border-radius: 5px;
+  object-fit: cover;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all var(--cubic);
+  transition: all var(--cubic);
+
+  .movie__item:hover & {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.movie__title,
+.movie__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.movie__title {
+  text-transform: uppercase;
+  color: var(--primary-font-color);
+}
+
+.movie__text {
+  display: flex;
+  align-items: center;
+  color: var(--accent-color);
+}
+
+.movie__vote {
+  margin-left: 6px;
+  padding: 1px 10px;
+  background-color: var(--accent-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--header-font-color);
+  border-radius: 5px;
+
+  @media screen and (min-width: 1280px) {
+    padding: 3px 12px;
+  }
+}
+
+.alarm-btn {
+  margin-top: 100px;
+  display: none;
+}

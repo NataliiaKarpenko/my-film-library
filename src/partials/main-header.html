@@ -1,0 +1,53 @@
+<header class="header main-header">
+  <div class="container">
+    <div class="header__upper-container">
+      <!-- <nav class="nav">
+        <include src="./partials/logo.html"></include> -->
+      <include src="./partials/navigation-list.html"></include>
+
+      <!-- <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./" class="nav__link active-link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./library.html" class="nav__link">My library</a>
+          </li>
+        </ul> -->
+      <!-- </nav> -->
+
+      <div class="btn-upper-container">
+        <include src="./partials/theme-btn.html"></include>
+        <include src="./partials/auth-btn.html"></include>
+        <include src="./partials/menu-btn.html"></include>
+
+        <!-- <button type="button" class="auth-btn" id="home-auth-btn"></button> -->
+
+        <!-- <button data-pushbar-target="mypushbar" class="menu-burger">
+          <svg width="30" height="30" aria-label="menu">
+            <use href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button> -->
+      </div>
+    </div>
+
+    <form class="search">
+      <input
+        type="text"
+        id="search-input"
+        class="search__input"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Movie search"
+      />
+      <button
+        type="submit"
+        class="search__btn"
+        aria-label="button for search by keyword"
+      >
+        <svg width="12" height="12">
+          <use href="./images/sprite.svg#search"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</header>

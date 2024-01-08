@@ -1,0 +1,43 @@
+<main class="main">
+  <section class="gallery">
+    <div class="container" id="main-container">
+      <h1 class="visually-hidden">Popular movies</h1>
+      <div class="alarm-btn">
+        <picture>
+          <source
+            srcset="
+              ./images/oops/oops-desktop.png 1x,
+              ./images/oops/oops-desktop.png 2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/oops/oops-tab.png 1x,
+              ./images/oops/oops-tab.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/oops/oops-mob.png 1x,
+              ./images/oops/oops-mob.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img src="./images/oops/oops-mob.png" alt="alarm button" />
+        </picture>
+      </div>
+      <ul class="movies__list"></ul>
+
+      <div id="pagination" class="tui-pagination visually-hidden">
+        <!-- Pagination buttons will be here -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--
+    ❗️❗️❗️ The path to images from the HTML partial
+    is the same as from the index.html file
+  -->

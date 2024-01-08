@@ -1,0 +1,22 @@
+.btn-upper-container .theme-button {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.theme-button {
+  display: flex;
+  color: var(--header-font-color);
+  font-weight: 500;
+  font-size: 22px;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  transition: fill var(--cubic), scale var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    scale: 1.02;
+  }
+}

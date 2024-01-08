@@ -1,0 +1,56 @@
+.auth__btn {
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: all var(--cubic), transform var(--cubic);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.auth__btn.signup-btn,
+.auth__btn.signout-btn {
+  color: var(--header-font-color);
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--header-font-color);
+  }
+}
+
+.auth__btn.signin-btn,
+.auth__btn.cancel-btn {
+  color: var(--primary-font-color);
+  background-color: var(--header-font-color);
+  border: 1px solid var(--primary-font-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+}
+
+.auth__btn.submit-btn {
+  color: var(--header-font-color);
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--header-font-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 14px 50px;
+  }
+}

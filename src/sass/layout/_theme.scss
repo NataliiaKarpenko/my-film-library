@@ -1,0 +1,116 @@
+.dark-theme {
+  & .main,
+  .auth__container,
+  .sign-modal,
+  .sign__input,
+  .movieModal__container {
+    background-color: var(--body-color);
+  }
+
+  & .movie__title,
+  .notification-text,
+  .auth__text,
+  .movieModal__title,
+  .movieModal__item.text,
+  .movieModal__subtitle,
+  .movieModal__description,
+  .tui-pagination .tui-page-btn {
+    color: var(--header-font-color);
+  }
+  & .tui-pagination .tui-page-btn.tui-is-selected {
+    color: var(--primary-font-color);
+  }
+
+  & .footer {
+    background-color: #1b2225;
+    color: var(--header-font-color);
+  }
+
+  & .scroll-up__button {
+    background-color: var(--body-color);
+    fill: var(--header-font-color);
+  }
+
+  & .close-btn.modal-btn,
+  .sign__label,
+  .sign__input {
+    color: var(--header-font-color);
+  }
+
+  & .auth__btn.signin-btn,
+  .auth__btn.cancel-btn,
+  .movieModal__btn.secondBtn {
+    color: var(--header-font-color);
+    background-color: var(--body-color);
+    border: 1px solid var(--header-font-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+    }
+  }
+
+  & .auth__btn.signup-btn,
+  .auth__btn.signout-btn {
+    color: var(--body-color);
+
+    &:hover,
+    &:focus {
+      background-color: var(--body-color);
+    }
+  }
+
+  & .auth__icon-container {
+    fill: var(--body-color);
+  }
+
+  .sign:focus-within .sign__icon {
+    fill: var(--header-font-color);
+  }
+
+  .sign__input {
+    border: 1px solid var(--modal-color);
+    &:focus {
+      outline: 1px solid var(--header-font-color);
+    }
+  }
+
+  .auth__btn.submit-btn {
+    color: var(--body-color);
+    &:hover,
+    &:focus {
+      background-color: var(--body-color);
+    }
+  }
+
+  & .close-btn.modal-btn {
+    color: var(--header-font-color);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .auth__btn.signup-btn,
+  .auth__btn.signout-btn,
+  .auth__btn.submit-btn,
+  .movieModal__btn.firstBtn {
+    color: var(--primary-font-color);
+    &:hover,
+    &:focus {
+      background-color: var(--body-color);
+      color: var(--accent-color);
+    }
+  }
+
+  .vote-average,
+  .movie__vote {
+    color: var(--primary-font-color);
+  }
+
+  & .tui-pagination .tui-prev.tui-page-btn,
+  .tui-pagination .tui-next.tui-page-btn {
+    background-color: var(--modal-color);
+  }
+}
