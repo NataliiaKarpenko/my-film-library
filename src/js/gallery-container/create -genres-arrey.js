@@ -1,4 +1,5 @@
 export const createGenresArr = movieGenresArr => {
+  let movieGenresInfo;
   if (movieGenresArr && movieGenresArr.length === 1) {
     movieGenresInfo = `${movieGenresArr[0]}`;
   } else if (movieGenresArr && movieGenresArr.length === 2) {

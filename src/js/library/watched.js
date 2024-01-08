@@ -30,7 +30,7 @@ import { createGenresArr } from '../gallery-container/create -genres-arrey';
 export const updateUIForNoMoviesInWatched = () => {
   hideElement(refs.paginationBlock);
   enableButton(refs.queueBtn);
-
+  let imageText = `There are no movies in your watched yet`;
   refs.moviesList.innerHTML = '';
   refs.moviesList.insertAdjacentHTML(
     'afterbegin',
@@ -105,8 +105,6 @@ export async function getWatchedCollection() {
             ? showElement(refs.paginationBlock)
             : hideElement(refs.paginationBlock);
         } else {
-          imageText = `There are no movies in your watched yet`;
-
           updateUIForNoMoviesInWatched();
         }
       }

@@ -31,6 +31,8 @@ export const updateUIForNoMoviesInQueue = () => {
   sessionStorage.removeItem('currentPageLibraryWatched');
   hideElement(refs.paginationBlock);
   enableButton(refs.queueBtn);
+  const imageText = `There are no movies in your queue yet`;
+
   refs.moviesList.innerHTML = '';
   refs.moviesList.insertAdjacentHTML(
     'afterbegin',
@@ -104,8 +106,6 @@ export async function getQueueCollection() {
             ? showElement(refs.paginationBlock)
             : hideElement(refs.paginationBlock);
         } else {
-          imageText = `There are no movies in your queue yet`;
-
           updateUIForNoMoviesInQueue();
         }
       }
