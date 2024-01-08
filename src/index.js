@@ -1,5 +1,5 @@
-import './js/gallery-container.js/popular-movies-gallery.js';
-import './js/gallery-container.js/moviesByQuery.js';
+import './js/gallery-container/popular-movies-gallery.js';
+import './js/gallery-container/moviesByQuery.js';
 import './js/calcScrollValue.js';
 import './js/modals/movie-modal/movie-modal.js';
 import './js/modals/auth-modals/auth-modal.js';
