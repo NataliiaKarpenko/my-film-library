@@ -3,8 +3,8 @@ import { Notify } from 'notiflix';
 
 import { TMDBApi } from '../../api';
 import { refs } from '../../refs';
-import { posterUrl } from '../../gallery-container.js/create-movies-list';
-import { auth, db } from '../auth-modals/firebase';
+import { posterUrl } from '../../gallery-container/create-movies-list';
+import { auth } from '../auth-modals/firebase';
 import { handleEscBtnPress } from '../auth-modals/handleEscBtnPress';
 import { createMovieModalMarkup } from './movie-modal-mark-up';
 import { addMovieToStore } from './add-movie-to-store';
