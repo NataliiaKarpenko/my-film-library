@@ -29,7 +29,6 @@ export async function createMoviesList(movieArr) {
         movieGenresArr.push(newGenres.name);
       }
       const movieGenresInfo = createGenresArr(movieGenresArr);
-      console.log(movieGenresInfo);
 
       return createMovie(
         id,
