@@ -35,6 +35,8 @@ function switchSection(section) {
       currentActiveSection === 'queue' ? 'watched' : 'queue';
     sessionStorage.removeItem(`currentPageLibrary${inactiveSection}`);
   }
+  // refs.queueBtn.removeEventListener('click', handleQueueBtnClick);
+  // refs.watchedBtn.removeEventListener('click', handleWatchedBtnClick);
 }
 
 export function handleBtnClickUnauthorised() {

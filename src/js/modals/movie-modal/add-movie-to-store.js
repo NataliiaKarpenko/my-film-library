@@ -63,7 +63,7 @@ function checkIfMovieInStore(queue, movieId) {
 
 function updateStore(currentStore, movie) {
   const { id, imgSrc, title, genresString, releaseYear, voteAverage } = movie;
-  console.log(voteAverage);
+
   const newResult = {
     id,
     img: imgSrc,

@@ -88,6 +88,7 @@ export async function getQueueCollection() {
         currentQueue[initialPageQueue - 1] || [];
 
       if (results) {
+        refs.queueBtn.removeEventListener('click', handleQueueBtnClick);
         paginationLibrary.reset(total_results);
 
         paginationLibrary.movePageTo(initialPageQueue);

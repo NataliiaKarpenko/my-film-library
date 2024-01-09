@@ -87,6 +87,7 @@ export async function getWatchedCollection() {
         currentWatched[initialPageWatched - 1] || [];
 
       if (results) {
+        refs.watchedBtn.removeEventListener('click', handleWatchedBtnClick);
         paginationLibrary.reset(total_results);
 
         paginationLibrary.movePageTo(initialPageWatched);

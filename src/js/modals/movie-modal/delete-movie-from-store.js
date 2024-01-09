@@ -11,7 +11,6 @@ export async function deleteMovieFromStore(e, movieModal, collection) {
     const docSnapshot = await getDoc(movieInStoreRef);
 
     const currentStore = docSnapshot.data()?.[collection] || [];
-    console.log(currentStore);
 
     const totalResults = calculateTotalResults(currentStore);
 
@@ -24,14 +23,11 @@ export async function deleteMovieFromStore(e, movieModal, collection) {
     const sectionIndex = currentStore.findIndex(section =>
       section.results.some(({ id }) => id === movieId)
     );
-    console.log(sectionIndex);
-    console.log(movieId);
-    console.log(currentStore[sectionIndex].results);
+
     const movieIndex = currentStore[sectionIndex].results.findIndex(
       ({ id }) => id === movieId
     );
 
-    console.log(movieIndex);
     let updatedStore = updateStoreOnMovieDelete(
       currentStore,
       sectionIndex,
@@ -48,9 +44,6 @@ export async function deleteMovieFromStore(e, movieModal, collection) {
       [collection]: updatedStore,
     });
     movieModal.close();
-    // Notify.success(
-    //   `The movie has successfully been deleted from the ${collection}`
-    // );
   } catch (e) {
     console.log(e);
   }

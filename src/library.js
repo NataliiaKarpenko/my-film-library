@@ -9,3 +9,4 @@ import './js/library/watched.js';
 import './js/calcScrollValue.js';
 import './js/modals/movie-modal/movie-modal.js';
 import './js/theme.js';
+
